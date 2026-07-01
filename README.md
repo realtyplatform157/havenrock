@@ -1,6 +1,6 @@
-# Realy — Texas Distressed Property Intelligence
+# HavenRock — Texas Distressed Property Intelligence
 
-Static marketing site for [Realy](https://realy.io) — a Texas-focused distressed property intelligence platform for real estate investors.
+Static marketing site for [HavenRock](https://havenrock.io) — a Texas-focused distressed property intelligence platform for real estate investors.
 
 ## Pages
 
@@ -18,8 +18,8 @@ Static marketing site for [Realy](https://realy.io) — a Texas-focused distress
 
 ```bash
 # Clone the repo
-git clone https://github.com/YOUR_USERNAME/realy-site.git
-cd realy-site
+git clone https://github.com/YOUR_USERNAME/havenrock-site.git
+cd havenrock-site
 
 # Open in browser (any of these work)
 open index.html
@@ -32,10 +32,10 @@ npx serve .                   # if you have Node installed
 1. Push to GitHub
 2. Go to **Settings → Pages**
 3. Source: **Deploy from a branch** → `main` → `/ (root)`
-4. Your site will be live at `https://YOUR_USERNAME.github.io/realy-site`
+4. Your site will be live at `https://YOUR_USERNAME.github.io/havenrock-site`
 
 To use a custom domain:
-1. Add a `CNAME` file to the repo root containing your domain (e.g. `realy.io`)
+1. Add a `CNAME` file to the repo root containing your domain (e.g. `havenrock.io`)
 2. Point your DNS `A` records to GitHub Pages IPs:
    ```
    185.199.108.153
@@ -67,7 +67,7 @@ Add `netlify` attribute to the form tag:
 ## Project Structure
 
 ```
-realy-site/
+havenrock-site/
 ├── index.html          # Landing page
 ├── css/
 │   └── style.css       # All styles
