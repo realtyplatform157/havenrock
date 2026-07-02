@@ -1,78 +1,47 @@
-// ── Mobile nav toggle ──
+// ── Mobile nav ──
 const toggle = document.getElementById('navToggle');
 const navLinks = document.getElementById('navLinks');
-
 if (toggle && navLinks) {
   toggle.addEventListener('click', () => {
-    navLinks.classList.toggle('open');
-    const isOpen = navLinks.classList.contains('open');
-    toggle.setAttribute('aria-expanded', isOpen);
+    const open = navLinks.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open);
   });
+  navLinks.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => navLinks.classList.remove('open'));
+  });
+}
 
-  // Close when a link is clicked
-  navLinks.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => navLinks.classList.remove('open'));
-  });
+// ── Scroll reveal ──
+if ('IntersectionObserver' in window) {
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('revealed'); obs.unobserve(e.target); }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('[data-reveal]').forEach(el => obs.observe(el));
 }
 
 // ── Waitlist form ──
 const form = document.getElementById('waitlistForm');
-const successMsg = document.getElementById('formSuccess');
-
+const success = document.getElementById('formSuccess');
 if (form) {
-  form.addEventListener('submit', (e) => {
+  form.addEventListener('submit', e => {
     e.preventDefault();
-    const email = form.querySelector('input[type="email"]').value;
+    const email = document.getElementById('wf-email').value;
+    const name  = document.getElementById('wf-name').value;
+    const mkt   = document.getElementById('wf-market').value;
     if (!email) return;
-
-    // Store locally — swap this for your real form endpoint (Formspree, Netlify Forms, etc.)
-    const existing = JSON.parse(localStorage.getItem('havenrock_waitlist') || '[]');
-    if (!existing.includes(email)) {
-      existing.push(email);
-      localStorage.setItem('havenrock_waitlist', JSON.stringify(existing));
-    }
-
+    const leads = JSON.parse(localStorage.getItem('hrv_leads') || '[]');
+    leads.push({ name, email, market: mkt, ts: new Date().toISOString() });
+    localStorage.setItem('hrv_leads', JSON.stringify(leads));
     form.style.display = 'none';
-    if (successMsg) successMsg.style.display = 'flex';
+    if (success) success.style.display = 'flex';
   });
 }
 
-// ── Scroll-reveal (lightweight, no library) ──
-const revealEls = document.querySelectorAll('[data-reveal]');
-
-if (revealEls.length && 'IntersectionObserver' in window) {
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('revealed');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.12 });
-
-  revealEls.forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(18px)';
-    el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-    observer.observe(el);
-  });
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('.revealed, [data-reveal]').forEach(el => {
-    if (el.classList.contains('revealed')) {
-      el.style.opacity = '1';
-      el.style.transform = 'none';
-    }
-  });
+// ── Animate score ring on load ──
+window.addEventListener('load', () => {
+  const circle = document.querySelector('.score-ring circle:last-child');
+  if (!circle) return;
+  circle.style.transition = 'stroke-dashoffset 1.2s cubic-bezier(0.4,0,0.2,1)';
 });
-
-// Class toggled by IntersectionObserver
-document.head.insertAdjacentHTML('beforeend', `
-<style>
-  [data-reveal].revealed {
-    opacity: 1 !important;
-    transform: none !important;
-  }
-</style>
-`);

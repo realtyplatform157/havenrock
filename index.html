@@ -3,351 +3,455 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>HavenRock — Texas Distressed Property Intelligence</title>
-  <meta name="description" content="HavenRock stacks public distress signals across 13 Texas counties to surface off-market investment opportunities before anyone else." />
-  <meta property="og:title" content="HavenRock — Texas Distressed Property Intelligence" />
-  <meta property="og:description" content="Tax delinquency, absentee owners, code violations — stacked and scored across Austin, DFW, Houston, and San Antonio." />
+  <title>Haven Rock Ventures — AI-Powered Real Estate Intelligence</title>
+  <meta name="description" content="Haven Rock Ventures uses AI to surface distressed properties, predict market shifts, and give Texas investors an unfair data advantage." />
+  <meta property="og:title" content="Haven Rock Ventures — AI for Real Estate" />
+  <meta property="og:description" content="Texas property intelligence powered by AI. Find deals before anyone else." />
   <meta property="og:type" content="website" />
-
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
-
-  <!-- Favicon: amber dot -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='10' fill='%23F59E0B'/></svg>" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><polygon points='16,4 28,26 4,26' fill='%23B8860B'/></svg>" />
 </head>
 <body>
 
-  <!-- ── Navigation ── -->
-  <nav aria-label="Main navigation">
+  <!-- ── NAV ── -->
+  <nav>
     <div class="container nav-inner">
-      <a href="index.html" class="nav-logo" aria-label="HavenRock home">
-        <span class="dot" aria-hidden="true"></span>
-        HavenRock
+      <a href="#" class="nav-logo" aria-label="Haven Rock Ventures">
+        <img src="HavenRockLogo.png" alt="Haven Rock Ventures" />
       </a>
-
-      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Open menu">
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-label="Open menu">
         <span></span><span></span><span></span>
       </button>
-
-      <ul class="nav-links" id="navLinks" role="list">
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#platform">Platform</a></li>
         <li><a href="#how-it-works">How It Works</a></li>
-        <li><a href="#features">Features</a></li>
-        <li><a href="#counties">Counties</a></li>
+        <li><a href="#signals">AI Signals</a></li>
+        <li><a href="#markets">Markets</a></li>
         <li><a href="#waitlist" class="nav-cta">Request Access</a></li>
       </ul>
     </div>
   </nav>
 
-  <!-- ── Hero ── -->
+  <!-- ── HERO ── -->
   <section id="hero">
-    <div class="hero-grid" aria-hidden="true"></div>
+    <div class="hero-bg" aria-hidden="true">
+      <div class="hero-grid"></div>
+      <div class="hero-glow"></div>
+    </div>
     <div class="container">
       <div class="hero-content">
-
-        <div class="hero-eyebrow" data-reveal>
-          <span class="pulse" aria-hidden="true"></span>
-          <span>Texas • 13 Counties • Daily Data Refresh</span>
+        <div class="hero-eyebrow">
+          <span class="pulse-dot" aria-hidden="true"></span>
+          <span>AI-Powered · Texas Markets · Daily Refresh</span>
         </div>
-
-        <h1 data-reveal>
-          Find distressed properties<br>
-          <em>before anyone else does</em>
-        </h1>
-
-        <p data-reveal>
-          HavenRock ingests county appraisal rolls, tax delinquency records, and
-          ownership data across Texas metro markets — then stacks and scores
-          every signal so you see the deals worth pursuing, not the noise.
-        </p>
-
-        <div class="hero-actions" data-reveal>
+        <h1>Real estate intelligence<br><em>your competition doesn't have</em></h1>
+        <p class="hero-lead">Haven Rock Ventures uses AI to process millions of public county records, stack distress signals, and rank the properties most likely to sell below market — before they ever hit a list.</p>
+        <div class="hero-actions">
           <a href="#waitlist" class="btn-primary">Request Early Access</a>
-          <a href="#how-it-works" class="btn-ghost">
-            See how it works
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+          <a href="#how-it-works" class="btn-outline">See how it works</a>
+        </div>
+        <div class="hero-pillars">
+          <div class="pillar">
+            <div class="pillar-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+            </div>
+            <div class="pillar-body">
+              <span class="pillar-title">Find</span>
+              <span class="pillar-sub">Opportunity</span>
+            </div>
+          </div>
+          <div class="pillar">
+            <div class="pillar-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M12 2a10 10 0 1 0 10 10"/><path d="M12 6v6l4 2"/></svg>
+            </div>
+            <div class="pillar-body">
+              <span class="pillar-title">Analyze</span>
+              <span class="pillar-sub">with AI</span>
+            </div>
+          </div>
+          <div class="pillar">
+            <div class="pillar-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941"/></svg>
+            </div>
+            <div class="pillar-body">
+              <span class="pillar-title">Evaluate</span>
+              <span class="pillar-sub">Risk &amp; Value</span>
+            </div>
+          </div>
+          <div class="pillar">
+            <div class="pillar-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </div>
+            <div class="pillar-body">
+              <span class="pillar-title">Make</span>
+              <span class="pillar-sub">Smarter Deals</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-proof">
+          <div class="proof-item">
+            <span class="proof-num">13</span>
+            <span class="proof-label">Texas counties</span>
+          </div>
+          <div class="proof-divider" aria-hidden="true"></div>
+          <div class="proof-item">
+            <span class="proof-num">3M<sup>+</sup></span>
+            <span class="proof-label">Properties tracked</span>
+          </div>
+          <div class="proof-divider" aria-hidden="true"></div>
+          <div class="proof-item">
+            <span class="proof-num">Daily</span>
+            <span class="proof-label">Data refresh</span>
+          </div>
+          <div class="proof-divider" aria-hidden="true"></div>
+          <div class="proof-item">
+            <span class="proof-num">0</span>
+            <span class="proof-label">Contracts required</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- AI Score Card — the signature element -->
+      <div class="hero-card" aria-label="Sample AI property analysis">
+        <div class="card-header">
+          <span class="card-label">AI Signal Report</span>
+          <span class="card-live"><span class="pulse-dot sm" aria-hidden="true"></span>Live</span>
+        </div>
+        <div class="card-address">
+          <span class="card-street">4821 Thornbury Ln</span>
+          <span class="card-county">Travis County, TX</span>
+        </div>
+        <div class="card-score-row">
+          <div class="score-ring" role="img" aria-label="Distress score 87 out of 100">
+            <svg viewBox="0 0 80 80" width="80" height="80">
+              <circle cx="40" cy="40" r="32" fill="none" stroke="#E8E5E0" stroke-width="6"/>
+              <circle cx="40" cy="40" r="32" fill="none" stroke="#2B5797" stroke-width="6"
+                stroke-dasharray="174" stroke-dashoffset="22.6"
+                stroke-linecap="round" transform="rotate(-90 40 40)"/>
             </svg>
-          </a>
-        </div>
-
-        <div class="hero-stats" data-reveal>
-          <div class="stat-item">
-            <span class="stat-value">13<span>+</span></span>
-            <span class="stat-label">Counties covered</span>
+            <div class="score-center">
+              <span class="score-num">87</span>
+              <span class="score-sub">/ 100</span>
+            </div>
           </div>
-          <div class="stat-item">
-            <span class="stat-value">254</span>
-            <span class="stat-label">Texas CADs indexed</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-value">3<span>×</span></span>
-            <span class="stat-label">Signal types stacked</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-value">Daily</span>
-            <span class="stat-label">Data refresh</span>
+          <div class="score-meta">
+            <div class="score-label">Distress Score</div>
+            <div class="score-rank">Top 4% in county</div>
+            <div class="score-updated">Updated 2h ago</div>
           </div>
         </div>
-
+        <div class="card-signals">
+          <div class="signal active">
+            <span class="signal-dot" aria-hidden="true"></span>
+            <span class="signal-name">Tax delinquent</span>
+            <span class="signal-val">6 yrs</span>
+          </div>
+          <div class="signal active">
+            <span class="signal-dot" aria-hidden="true"></span>
+            <span class="signal-name">Absentee owner</span>
+            <span class="signal-val">CA</span>
+          </div>
+          <div class="signal active">
+            <span class="signal-dot" aria-hidden="true"></span>
+            <span class="signal-name">Code violation</span>
+            <span class="signal-val">Open</span>
+          </div>
+          <div class="signal inactive">
+            <span class="signal-dot off" aria-hidden="true"></span>
+            <span class="signal-name">Probate</span>
+            <span class="signal-val">—</span>
+          </div>
+        </div>
+        <div class="card-footer">
+          <div class="card-arv">
+            <span class="arv-label">Est. ARV</span>
+            <span class="arv-val">$487,000</span>
+          </div>
+          <button class="card-btn" disabled>Skip Trace →</button>
+        </div>
+        <div class="card-watermark" aria-hidden="true">SAMPLE</div>
       </div>
     </div>
   </section>
 
-  <!-- ── Signal Ticker ── -->
-  <div class="ticker-wrap" aria-label="Live signal feed" aria-hidden="true">
+  <!-- ── TICKER ── -->
+  <div class="ticker-wrap" aria-hidden="true">
     <div class="ticker-inner">
-      <!-- Duplicated for seamless loop -->
-      <div class="ticker-item"><span class="tag">TAX DELINQUENT</span> Harris County · 4 yrs overdue</div>
-      <div class="ticker-item"><span class="tag">ABSENTEE OWNER</span> Travis County · owner in California</div>
-      <div class="ticker-item"><span class="tag">CODE VIOLATION</span> Dallas County · open since 2022</div>
-      <div class="ticker-item"><span class="tag">TAX DELINQUENT</span> Bexar County · 6 yrs overdue</div>
-      <div class="ticker-item"><span class="tag">ABSENTEE OWNER</span> Collin County · owner out of state</div>
-      <div class="ticker-item"><span class="tag">TAX DELINQUENT</span> Montgomery County · 3 yrs overdue</div>
-      <div class="ticker-item"><span class="tag">CODE VIOLATION</span> Tarrant County · open since 2021</div>
-      <div class="ticker-item"><span class="tag">ABSENTEE OWNER</span> Fort Bend County · owner in New York</div>
-
-      <!-- Duplicate set for infinite scroll -->
-      <div class="ticker-item"><span class="tag">TAX DELINQUENT</span> Harris County · 4 yrs overdue</div>
-      <div class="ticker-item"><span class="tag">ABSENTEE OWNER</span> Travis County · owner in California</div>
-      <div class="ticker-item"><span class="tag">CODE VIOLATION</span> Dallas County · open since 2022</div>
-      <div class="ticker-item"><span class="tag">TAX DELINQUENT</span> Bexar County · 6 yrs overdue</div>
-      <div class="ticker-item"><span class="tag">ABSENTEE OWNER</span> Collin County · owner out of state</div>
-      <div class="ticker-item"><span class="tag">TAX DELINQUENT</span> Montgomery County · 3 yrs overdue</div>
-      <div class="ticker-item"><span class="tag">CODE VIOLATION</span> Tarrant County · open since 2021</div>
-      <div class="ticker-item"><span class="tag">ABSENTEE OWNER</span> Fort Bend County · owner in New York</div>
+      <span class="tick-item"><span class="tick-tag">Tax Delinquent</span> Harris · 8 yrs overdue</span>
+      <span class="tick-item"><span class="tick-tag">Absentee Owner</span> Travis · owner out of state</span>
+      <span class="tick-item"><span class="tick-tag">Code Violation</span> Dallas · open since 2021</span>
+      <span class="tick-item"><span class="tick-tag">Probate</span> Bexar · estate filing 2024</span>
+      <span class="tick-item"><span class="tick-tag">Tax Delinquent</span> Collin · 4 yrs overdue</span>
+      <span class="tick-item"><span class="tick-tag">Absentee Owner</span> Fort Bend · owner in NY</span>
+      <span class="tick-item"><span class="tick-tag">Code Violation</span> Montgomery · open since 2023</span>
+      <span class="tick-item"><span class="tick-tag">Tax Delinquent</span> Williamson · 5 yrs overdue</span>
+      <span class="tick-item"><span class="tick-tag">Tax Delinquent</span> Harris · 8 yrs overdue</span>
+      <span class="tick-item"><span class="tick-tag">Absentee Owner</span> Travis · owner out of state</span>
+      <span class="tick-item"><span class="tick-tag">Code Violation</span> Dallas · open since 2021</span>
+      <span class="tick-item"><span class="tick-tag">Probate</span> Bexar · estate filing 2024</span>
+      <span class="tick-item"><span class="tick-tag">Tax Delinquent</span> Collin · 4 yrs overdue</span>
+      <span class="tick-item"><span class="tick-tag">Absentee Owner</span> Fort Bend · owner in NY</span>
+      <span class="tick-item"><span class="tick-tag">Code Violation</span> Montgomery · open since 2023</span>
+      <span class="tick-item"><span class="tick-tag">Tax Delinquent</span> Williamson · 5 yrs overdue</span>
     </div>
   </div>
 
-  <!-- ── How It Works ── -->
-  <section id="how-it-works">
+  <!-- ── PLATFORM ── -->
+  <section id="platform">
     <div class="container">
-      <div class="section-header" data-reveal>
-        <p class="mono">Process</p>
-        <h2>Raw public data.<br>Actionable deals.</h2>
-        <p>Three steps from county record to investment opportunity.</p>
+      <div class="section-head" data-reveal>
+        <p class="eyebrow">The Platform</p>
+        <h2>Not a database. An intelligence engine.</h2>
+        <p>Other platforms give you data. We give you ranked, scored, ready-to-act opportunities — pulled from the same public records everyone else ignores because they're too hard to process at scale.</p>
       </div>
-
-      <div class="steps-grid">
-        <div class="step-card" data-reveal>
-          <span class="step-number">STEP 01</span>
-          <div class="step-icon" aria-hidden="true">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 2.625c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125" />
-            </svg>
+      <div class="platform-grid">
+        <div class="platform-card large" data-reveal>
+          <div class="pcard-icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
           </div>
-          <h3>Ingest county data</h3>
-          <p>Appraisal rolls, tax delinquency CSVs, and ownership records are pulled directly from all 13 Texas county CADs — refreshed daily, stored in a PostGIS database.</p>
-        </div>
-
-        <div class="step-card" data-reveal>
-          <span class="step-number">STEP 02</span>
-          <div class="step-icon" aria-hidden="true">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
-            </svg>
+          <h3>AI Distress Scoring</h3>
+          <p>Every property in our 13-county coverage area receives a daily 0–100 distress score. The model weighs tax delinquency age, ownership patterns, code violation history, and 14 other signals — giving you a single number that ranks opportunity.</p>
+          <div class="pcard-stat">
+            <span class="pstat-num">18</span>
+            <span class="pstat-label">signals per property</span>
           </div>
-          <h3>Stack distress signals</h3>
-          <p>Each property is scored 0–100 based on stacked signals: tax delinquency age, absentee ownership, code violations, and vacancy indicators. More signals, higher score.</p>
         </div>
-
-        <div class="step-card" data-reveal>
-          <span class="step-number">STEP 03</span>
-          <div class="step-icon" aria-hidden="true">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941" />
-            </svg>
+        <div class="platform-card" data-reveal>
+          <div class="pcard-icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6-10l6-3m0 16l5.447-2.724A1 1 0 0021 16.382V5.618a1 1 0 00-1.447-.894L15 7m0 13V7"/></svg>
           </div>
-          <h3>Surface the deals</h3>
-          <p>A clean dashboard ranks the highest-scoring properties by county, signal type, or custom filter — so you spend time closing deals, not building spreadsheets.</p>
+          <h3>County-Direct Data</h3>
+          <p>We pull straight from Texas CAD bulk exports — not third-party aggregators — so ownership and assessment data is fresher than anything on the market.</p>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── Features ── -->
-  <section id="features">
-    <div class="container">
-      <div class="section-header" data-reveal>
-        <p class="mono">Features</p>
-        <h2>Every signal.<br>One platform.</h2>
-        <p>Built for investors who want data depth, not another lead-gen list.</p>
-      </div>
-
-      <div class="features-grid">
-
-        <div class="feature-card" data-reveal>
-          <div class="feature-icon" aria-hidden="true">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
+        <div class="platform-card" data-reveal>
+          <div class="pcard-icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
           </div>
-          <h3>Tax Delinquency Tracking</h3>
-          <p>Daily-refreshed delinquency data for all 13 counties. See which properties are 1, 3, or 6+ years behind — the longer the tail, the higher the motivation to sell.</p>
+          <h3>Instant Skip Trace</h3>
+          <p>One click to get owner phone and email via BatchData. Pay per use, no minimums. The deal you find at 9pm can have an offer out by 9:05pm.</p>
         </div>
-
-        <div class="feature-card" data-reveal>
-          <div class="feature-icon" aria-hidden="true">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
-              <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
-            </svg>
-          </div>
-          <h3>Absentee Owner Detection</h3>
-          <p>Automatically flags properties where the owner's mailing address doesn't match the property address — a reliable proxy for motivated, out-of-state sellers.</p>
-        </div>
-
-        <div class="feature-card" data-reveal>
-          <div class="feature-icon" aria-hidden="true">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" />
-            </svg>
-          </div>
-          <h3>Distress Scoring (0–100)</h3>
-          <p>Every property gets a composite score. Multiple signals stacked on one address — tax delinquency + absentee owner + code violation — push scores toward 100.</p>
-        </div>
-
-        <div class="feature-card" data-reveal>
-          <div class="feature-icon" aria-hidden="true">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M9 6.75V15m6-6v8.25m.503 3.498l4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 00-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0z" />
-            </svg>
-          </div>
-          <h3>Interactive Map View</h3>
-          <p>Color-coded parcel map across all 13 counties. Red = high distress. Filter by county, signal type, or score threshold to focus on your target neighborhoods.</p>
-        </div>
-
-        <div class="feature-card" data-reveal>
-          <div class="feature-icon" aria-hidden="true">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0H3" />
-            </svg>
+        <div class="platform-card" data-reveal>
+          <div class="pcard-icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2"/></svg>
           </div>
           <h3>Deal Pipeline</h3>
-          <p>Move properties from Identified → Researching → Offer Sent → Closed on a kanban board. Share your pipeline with partners or keep it private.</p>
+          <p>Kanban board from Identified to Closed. Track every lead, leave notes, assign to partners. Your entire deal flow in one place.</p>
         </div>
-
-        <div class="feature-card" data-reveal>
-          <div class="feature-icon" aria-hidden="true">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
-            </svg>
-          </div>
-          <h3>Skip Trace Integration</h3>
-          <p>One-click skip trace via BatchData to find owner phone and email. No monthly minimums — pay only for what you use, when you need it.</p>
-        </div>
-
       </div>
     </div>
   </section>
 
-  <!-- ── Counties ── -->
-  <section id="counties">
+  <!-- ── HOW IT WORKS ── -->
+  <section id="how-it-works" class="alt-bg">
     <div class="container">
-      <div class="counties-intro" data-reveal>
-        <p class="mono">Coverage</p>
-        <h2>13 counties.<br>4 major Texas metros.</h2>
-        <p>Every major Texas investment market covered from day one — with the CAD data pipelines already built.</p>
+      <div class="section-head" data-reveal>
+        <p class="eyebrow">How It Works</p>
+        <h2>From raw county record<br>to ranked deal in seconds</h2>
       </div>
-
-      <div class="metros-grid">
-
-        <div class="metro-card" data-reveal>
-          <div class="metro-label">Metro 01</div>
-          <h3>Austin</h3>
-          <div class="county-tags">
-            <span class="county-tag">Travis</span>
-            <span class="county-tag">Williamson</span>
-            <span class="county-tag">Hays</span>
+      <div class="steps-row">
+        <div class="step" data-reveal>
+          <div class="step-num" aria-hidden="true">01</div>
+          <div class="step-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
           </div>
+          <h3>Ingest</h3>
+          <p>Every night, our pipeline pulls fresh appraisal rolls, tax delinquency CSVs, and ownership records directly from all 13 Texas county CADs.</p>
         </div>
-
-        <div class="metro-card" data-reveal>
-          <div class="metro-label">Metro 02</div>
-          <h3>Dallas–Fort Worth</h3>
-          <div class="county-tags">
-            <span class="county-tag">Dallas</span>
-            <span class="county-tag">Tarrant</span>
-            <span class="county-tag">Collin</span>
-            <span class="county-tag">Denton</span>
+        <div class="step-arrow" aria-hidden="true">→</div>
+        <div class="step" data-reveal>
+          <div class="step-num" aria-hidden="true">02</div>
+          <div class="step-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
           </div>
+          <h3>Score</h3>
+          <p>Our AI model reads 18 signals per property — delinquency age, ownership gaps, violations, mailing address mismatches — and outputs a fresh distress score.</p>
         </div>
-
-        <div class="metro-card" data-reveal>
-          <div class="metro-label">Metro 03</div>
-          <h3>Houston</h3>
-          <div class="county-tags">
-            <span class="county-tag">Harris</span>
-            <span class="county-tag">Brazoria</span>
-            <span class="county-tag">Fort Bend</span>
-            <span class="county-tag">Montgomery</span>
-            <span class="county-tag">Galveston</span>
+        <div class="step-arrow" aria-hidden="true">→</div>
+        <div class="step" data-reveal>
+          <div class="step-num" aria-hidden="true">03</div>
+          <div class="step-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941"/></svg>
           </div>
+          <h3>Rank</h3>
+          <p>Properties surface in your dashboard ranked by score, county, or signal type. Filter to your criteria — zip code, value range, signal combination — and act.</p>
         </div>
-
-        <div class="metro-card" data-reveal>
-          <div class="metro-label">Metro 04</div>
-          <h3>San Antonio</h3>
-          <div class="county-tags">
-            <span class="county-tag">Bexar</span>
+        <div class="step-arrow" aria-hidden="true">→</div>
+        <div class="step" data-reveal>
+          <div class="step-num" aria-hidden="true">04</div>
+          <div class="step-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0"/></svg>
           </div>
+          <h3>Contact</h3>
+          <p>One-click skip trace. Get owner contact details and reach out the same night. No waiting, no third-party lists, no sharing leads with 200 other investors.</p>
         </div>
-
       </div>
     </div>
   </section>
 
-  <!-- ── Waitlist ── -->
-  <section id="waitlist">
+  <!-- ── AI SIGNALS ── -->
+  <section id="signals">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <p class="eyebrow">AI Signals</p>
+        <h2>More signals. Better deals.</h2>
+        <p>Each signal tells part of the story. Stacked together, they tell you exactly how motivated a seller is likely to be.</p>
+      </div>
+      <div class="signals-grid">
+        <div class="signal-card high" data-reveal>
+          <div class="sc-tier">High impact</div>
+          <h3>Tax Delinquency</h3>
+          <p>Years overdue, total owed, attorney referral status. Longer delinquency = higher seller urgency.</p>
+          <div class="sc-bar"><div class="sc-fill" style="width:92%"></div></div>
+        </div>
+        <div class="signal-card high" data-reveal>
+          <div class="sc-tier">High impact</div>
+          <h3>Absentee Ownership</h3>
+          <p>Situs vs. mailing address mismatch. Out-of-state owners are statistically 3× more likely to sell below market.</p>
+          <div class="sc-bar"><div class="sc-fill" style="width:85%"></div></div>
+        </div>
+        <div class="signal-card mid" data-reveal>
+          <div class="sc-tier">Medium impact</div>
+          <h3>Code Violations</h3>
+          <p>Open municipal violations sourced from county records. Duration and severity both weighted.</p>
+          <div class="sc-bar"><div class="sc-fill" style="width:68%"></div></div>
+        </div>
+        <div class="signal-card mid" data-reveal>
+          <div class="sc-tier">Medium impact</div>
+          <h3>Probate Filing</h3>
+          <p>Estate filings indicate inherited properties — heirs often prefer a fast sale to a lengthy process.</p>
+          <div class="sc-bar"><div class="sc-fill" style="width:62%"></div></div>
+        </div>
+        <div class="signal-card low" data-reveal>
+          <div class="sc-tier">Supporting signal</div>
+          <h3>Vacant Indicator</h3>
+          <p>Mailing address + utility patterns used to estimate vacancy likelihood.</p>
+          <div class="sc-bar"><div class="sc-fill" style="width:44%"></div></div>
+        </div>
+        <div class="signal-card low" data-reveal>
+          <div class="sc-tier">Supporting signal</div>
+          <h3>Ownership Duration</h3>
+          <p>Long-term holders with distress signals have more equity — and more room to negotiate.</p>
+          <div class="sc-bar"><div class="sc-fill" style="width:38%"></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── MARKETS ── -->
+  <section id="markets" class="alt-bg">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <p class="eyebrow">Markets</p>
+        <h2>Built for the four big Texas metros from day one</h2>
+      </div>
+      <div class="markets-grid">
+        <div class="market-card" data-reveal>
+          <div class="market-num">01</div>
+          <h3>Austin</h3>
+          <div class="market-counties">Travis · Williamson · Hays</div>
+          <p>The fastest-growing metro in America. High appreciation, motivated sellers hiding in plain sight.</p>
+        </div>
+        <div class="market-card" data-reveal>
+          <div class="market-num">02</div>
+          <h3>Dallas–Fort Worth</h3>
+          <div class="market-counties">Dallas · Tarrant · Collin · Denton</div>
+          <p>Largest Texas metro. Sprawling inventory with deep pockets of distress in older suburban stock.</p>
+        </div>
+        <div class="market-card" data-reveal>
+          <div class="market-num">03</div>
+          <h3>Houston</h3>
+          <div class="market-counties">Harris · Brazoria · Fort Bend · Montgomery · Galveston</div>
+          <p>The most complex market in Texas. Five counties, massive inventory, rich delinquency data.</p>
+        </div>
+        <div class="market-card" data-reveal>
+          <div class="market-num">04</div>
+          <h3>San Antonio</h3>
+          <div class="market-counties">Bexar</div>
+          <p>Military city, investor-friendly courts, strong rental demand. A market that consistently rewards patient buyers.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── WAITLIST ── -->
+  <section id="waitlist" class="waitlist-section">
     <div class="container">
       <div class="waitlist-inner">
-        <p class="mono" data-reveal>Early Access</p>
-        <h2 data-reveal>Be first when<br>we open the doors</h2>
-        <p data-reveal>
-          HavenRock is currently in private beta with a small group of Texas investors.
-          Drop your email and we'll reach out when access opens.
-        </p>
-
-        <form class="waitlist-form" id="waitlistForm" data-reveal novalidate>
-          <input
-            type="email"
-            placeholder="your@email.com"
-            required
-            aria-label="Email address"
-            autocomplete="email"
-          />
-          <button type="submit">Request Access</button>
-        </form>
-
-        <div class="form-success" id="formSuccess" role="alert">
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
-          </svg>
-          You're on the list. We'll be in touch.
+        <div class="waitlist-text" data-reveal>
+          <p class="eyebrow light">Early Access</p>
+          <h2>Join the private beta</h2>
+          <p>Haven Rock Ventures is currently in private beta with a small group of Texas investors. We're opening access market by market. Drop your email and we'll reach out when your county goes live.</p>
+          <ul class="waitlist-perks">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2B5797" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              No subscription until you're satisfied with the data
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2B5797" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              Founding member pricing locked in permanently
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2B5797" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              Direct line to the product team
+            </li>
+          </ul>
         </div>
-
-        <p class="form-note" data-reveal>No spam. No sales calls. Just a heads-up when access is ready.</p>
+        <div class="waitlist-form-wrap" data-reveal>
+          <form class="waitlist-form" id="waitlistForm" novalidate>
+            <div class="wf-field">
+              <label for="wf-name">Your name</label>
+              <input type="text" id="wf-name" placeholder="David Chen" autocomplete="name" />
+            </div>
+            <div class="wf-field">
+              <label for="wf-email">Email address</label>
+              <input type="email" id="wf-email" placeholder="you@example.com" autocomplete="email" required />
+            </div>
+            <div class="wf-field">
+              <label for="wf-market">Primary market</label>
+              <select id="wf-market">
+                <option value="">Select a metro</option>
+                <option>Austin</option>
+                <option>Dallas–Fort Worth</option>
+                <option>Houston</option>
+                <option>San Antonio</option>
+                <option>Multiple markets</option>
+              </select>
+            </div>
+            <button type="submit" class="btn-primary full">Request Access →</button>
+          </form>
+          <div class="form-success" id="formSuccess" role="alert" style="display:none">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2B5797" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            You're on the list. We'll be in touch shortly.
+          </div>
+          <p class="form-note">No spam. No sales calls. We reach out personally.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ── Footer ── -->
+  <!-- ── FOOTER ── -->
   <footer>
     <div class="container footer-inner">
-      <div class="footer-logo">
-        <span class="dot" aria-hidden="true"></span>
-        HavenRock
+      <div class="footer-brand">
+        <a href="#" class="nav-logo footer-logo" aria-label="Haven Rock Ventures">
+          <img src="HavenRockLogo.png" alt="Haven Rock Ventures" />
+        </a>
+        <p class="footer-desc">AI Powering Real Estate Decisions.</p>
       </div>
-      <p class="footer-copy">© 2026 HavenRock. Texas distressed property intelligence.</p>
-      <ul class="footer-links" role="list">
+      <ul class="footer-links">
+        <li><a href="#platform">Platform</a></li>
         <li><a href="#how-it-works">How It Works</a></li>
-        <li><a href="#features">Features</a></li>
-        <li><a href="#counties">Counties</a></li>
+        <li><a href="#signals">AI Signals</a></li>
+        <li><a href="#markets">Markets</a></li>
         <li><a href="#waitlist">Get Access</a></li>
       </ul>
+    </div>
+    <div class="container footer-bottom">
+      <p class="footer-copy">© 2026 Haven Rock Ventures. All rights reserved.</p>
+      <p class="footer-copy muted">Texas distressed property intelligence.</p>
     </div>
   </footer>
 
